@@ -20,7 +20,7 @@ class GavToken < Contract
 
   ## Send $((valueInmGAV / 1000).fixed(0,3)) GAV from the account of
   ##    $(message.caller.address()), to an account accessible only by $(to.address()).
-  def send( to, value )   ## address to, uint256 valueInmGAV
+  def send( to, value )
     if @balances[msg.sender] >= value
          @balances[to]         += value
          @balances[msg.sender] -= value
@@ -28,7 +28,7 @@ class GavToken < Contract
   end
 
   ## getter function for the balance
-  def balance( who )  ## (address who) constant returns (uint256 balanceInmGAV)
+  def balance( who )
     @balances[who]
   end
 end # class GavToken

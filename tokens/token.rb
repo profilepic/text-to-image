@@ -13,10 +13,10 @@ require_relative '../lib/universum'
 
 class Token < Contract
 
-############################
-# Events of the token
-#  Transfer: event({_from: indexed(address), _to: indexed(address), _value: uint256})
-#  Approval: event({_owner: indexed(address), _spender: indexed(address), _value: uint256})
+  ############################
+  # Events of the token
+  #  Transfer: event({_from: indexed(address), _to: indexed(address), _value: uint256})
+  #  Approval: event({_owner: indexed(address), _spender: indexed(address), _value: uint256})
 
   class Transfer < Event
     def initialize( from:, to:, value: )
@@ -31,14 +31,21 @@ class Token < Contract
   end
 
 
-###############################
-# Variables of the token
-#  name:        public(bytes32)
-#  symbol:      public(bytes32)
-#  totalSupply: public(uint256)
-#  decimals:    public(uint256)
-#  balances:    int128[address]
-#  allowed:     int128[address][address]
+  ###############################
+  # Variables of the token
+  #  name:        public(bytes32)
+  #  symbol:      public(bytes32)
+  #  totalSupply: public(uint256)
+  #  decimals:    public(uint256)
+  #  balances:    int128[address]
+  #  allowed:     int128[address][address]
+
+  ## helper hash/mapping; auto-inits/adds record/mapping on (first) lookup
+  class AllowedHash
+    def initialize()   @h = {}; end
+    def [](addr)       @h[addr] ||= Hash.new(0); end
+  end
+
 
   def initialize( name:, symbol:, decimals:, initial_supply: ) ## _name: bytes32, _symbol: bytes32, _decimals: uint256, _initialSupply: uint256
     @name     = name
@@ -47,14 +54,12 @@ class Token < Contract
     @total_supply =  initial_supply * (10 ** decimals)
     @balances     = Hash.new(0)    ## note: special hash (default value is 0 and NOT nil)
     @balances[msg.sender] = @total_supply
-    @allowed =   {}
+    @allowed      = AllowedHash.new
   end
 
 
   # What is the balance of a particular account?
   def balance_of( owner: )  ## (_owner: address) -> uint256:
-    ##  todo/fix: return 0 for nil (n/a - not available) - why? why not?
-    ##  todo/fix:  use Hash.new(0)  or just {} - why? why not???
     ##  note: will return 0 if not found (uses Hash.new(0) for 0 default)
     @balances[owner]
   end
@@ -78,10 +83,6 @@ class Token < Contract
 
   # Transfer allowed tokens from a specific account to another.
   def transfer_from( from:, to:, value: ) ###(_from: address, _to: address, _value: int128(uint256)) -> bool:
-    ## make sure allowed is not empty
-    @allowed[from] ||= {}
-    @allowed[from][msg.sender] ||= 0
-
     if assert( value <= @allowed[from][msg.sender] ) &&
        assert( value <= @balances[from] )
 
@@ -111,7 +112,6 @@ class Token < Contract
   #       backwards compatilibilty with contracts deployed before.
 
   def approve( spender:, value: )   ##(_spender: address, _value: int128(uint256)) -> bool:
-    @allowed[msg.sender] ||= {}  ## make sure allowed is not empty
     @allowed[msg.sender][spender] = value
 
     log Approval.new( owner: msg.sender, spender: spender, value: value )
@@ -122,10 +122,6 @@ class Token < Contract
 
   # Get the allowance an address has to spend another's token.
   def allowance( owner:, spender: )  ## _owner: address, _spender: address
-    ## make sure allowed is not empty
-    @allowed[owner] ||= {}
-    @allowed[owner][spender] ||= 0
-
     @allowed[owner][spender]
   end
 
@@ -179,7 +175,7 @@ pp token.approve( spender: '0x1111', value: 50 )
 pp token.allowance( owner: '0x1111', spender: '0x0000' )
 
 
-### change sender to 0x0001
+### change sender to 0x1111
 Contract.msg = { sender: '0x1111' }
 pp Contract.msg
 ## pp Contract.msg = Contract::Msg.new( sender: '0x0001' )
