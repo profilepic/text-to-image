@@ -8,27 +8,27 @@ class Contract
 
   ## blockchain message (msg) context
   ##   includes:  sender (address)
+  ##  todo: allow writable attribues e.g. sender - why? why not?
   class Msg
     attr_reader :sender
 
-    def initialize( sender: )
+    def initialize( sender: '0x0000' )
       @sender = sender
     end
   end  # class Msg
 
-  def self.msg( **kwargs )
-    if kwargs.empty?
-      @@msg ||= Msg.new( sender: '0x0000' )
-    else
-      ## allow convenience shortcut e.g.
-      ##   Contract.msg( sender: '0x0000') # instead of
-      ##   Contract.msg = Contract::Msg.new( sender: '0x0000' )
-      @@msg = Msg.new( kwargs )
-    end
+
+  def self.msg
+      @@msg ||= Msg.new
   end
 
   def self.msg=( value )
-    @@msg = value
+    if value.is_a? Hash
+      kwargs = value
+      @@msg = Msg.new( kwargs )
+    else   ## assume Msg class/type
+      @@msg = value
+    end
   end
 
   def msg() self.class.msg; end
