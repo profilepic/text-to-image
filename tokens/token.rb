@@ -136,6 +136,7 @@ end ## class Token
 #############
 #  start testing...
 
+if __FILE__ == $0
 
 ## sample event handler
 class EventHandler
@@ -197,3 +198,5 @@ pp Contract.msg
 pp token.transfer( to: '0x1111', value: 1 )
 pp token.balance_of( owner: '0x0000' )
 pp token.balance_of( owner: '0x1111' )
+
+end

@@ -38,8 +38,12 @@ class GavToken < Contract
 end # class GavToken
 
 
+
+
 #############
 #  start testing...
+
+if __FILE__ == $0
 
 token = GavToken.new
 pp token
@@ -54,3 +58,5 @@ pp token.balance( '0x1111' )
 pp token.send( '0x2222', 200 )
 pp token.balance( '0x2222' )
 pp token.balance( '0x0000' )
+
+end
