@@ -8,14 +8,14 @@ for the next generation ethereum 2.0 world computer
 Ruby (Universum Blockchain Contract Script Language) Example
 
 ``` ruby
-class GavCoin < Contract
+class GavToken < Contract
 
-  TOTAL_COINS = 100_000_000_000
+  TOTAL_TOKENS = 100_000_000_000
 
   ## Endows creator of contract with 1m GAV.
   def initialize
     @balances = {}
-    @balances[msg.sender] = TOTAL_COINS
+    @balances[msg.sender] = TOTAL_TOKENS
   end
 
   ## Send $((valueInmGAV / 1000).fixed(0,3)) GAV from the account of
@@ -39,14 +39,14 @@ vs
 Solidity (JavaScript-Like Ethereum Blockchain Contract Script Language) Example
 
 ``` solidity
-contract GavCoin
+contract GavToken
 {
   mapping(address=>uint) balances;
-  uint constant totalCoins = 100000000000;
+  uint constant totalTokens = 100000000000;
 
   /// Endows creator of contract with 1m GAV.
-  function GavCoin(){
-      balances[msg.sender] = totalCoins;
+  function GavToken(){
+      balances[msg.sender] = totalTokens;
   }
 
   /// Send $((valueInmGAV / 1000).fixed(0,3)) GAV from the account of
@@ -102,14 +102,14 @@ def balanceOf(_owner: address) -> uint256:
 
 # Send `_value` tokens to `_to` from your account
 @public
-def transfer(_to: address, _amount: int128(uint256)) -> bool:
+def transfer(_to: address, _value: int128(uint256)) -> bool:
 
-    assert self.balances[msg.sender] >= _amount
-    assert self.balances[_to] + _amount >= self.balances[_to]
+    assert self.balances[msg.sender] >= _value
+    assert self.balances[_to] + _value >= self.balances[_to]
 
-    self.balances[msg.sender] -= _amount  # Subtract from the sender
-    self.balances[_to] += _amount  # Add the same to the recipient
-    log.Transfer(msg.sender, _to, convert(_amount, 'uint256'))  # log transfer event.
+    self.balances[msg.sender] -= _value  # Subtract from the sender
+    self.balances[_to] += _value  # Add the same to the recipient
+    log.Transfer(msg.sender, _to, convert(_value, 'uint256'))  # log transfer event.
 
     return True
 

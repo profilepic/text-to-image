@@ -5,10 +5,10 @@
 #
 #
 #  to test the contract script run:
-#   $ ruby  tokens/token.rb
+#   $ ruby tokens/token.rb
 
 
-require_relative 'universum'
+require_relative '../lib/universum'
 
 
 class Token < Contract
@@ -46,7 +46,7 @@ class Token < Contract
     @decimals = decimals
     @total_supply =  initial_supply * (10 ** decimals)
     @balances     = Hash.new(0)    ## note: special hash (default value is 0 and NOT nil)
-    @balances[ msg.sender ] = @total_supply
+    @balances[msg.sender] = @total_supply
     @allowed =   {}
   end
 
@@ -56,7 +56,7 @@ class Token < Contract
     ##  todo/fix: return 0 for nil (n/a - not available) - why? why not?
     ##  todo/fix:  use Hash.new(0)  or just {} - why? why not???
     ##  note: will return 0 if not found (uses Hash.new(0) for 0 default)
-    @balances[ owner ]
+    @balances[owner]
   end
 
 
