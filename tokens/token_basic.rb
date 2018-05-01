@@ -59,4 +59,18 @@ pp token.send( '0x2222', 200 )
 pp token.balance( '0x2222' )
 pp token.balance( '0x0000' )
 
+
+##################
+## use/try send_transaction
+
+pp token.send_transaction( :balance, '0x0000' )
+pp token.send_transaction( :balance, '0x1111' )
+
+pp token.send_transaction( :send, '0x1111', 100 )
+pp token.send_transaction( :balance, '0x1111' )
+
+pp token.send_transaction( :send, '0x2222', 200 )
+pp token.send_transaction( :balance, '0x2222' )
+pp token.send_transaction( :balance, '0x0000' )
+
 end
