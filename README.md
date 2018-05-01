@@ -1,3 +1,7 @@
+New to Universum? See the [Universum (World Computer) White Paper](https://github.com/openblockchains/universum/blob/master/WHITEPAPER.md)!
+
+
+
 # Universum blockhain contract / transaction scripts
 
 (in plain vanilla / standard ruby)
