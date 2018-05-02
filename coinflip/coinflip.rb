@@ -14,13 +14,14 @@ class CoinFlip < Contract
     # nothing here
   end
 
-	def double     ## todo/check: use a different name e.g. call/bet/flip etc. why? why not?
-		bet  = msg.value
-		flip = block.timestamp    ## semirandom
-		if flip % 2 == 0
-			return
-		else
-			msg.sender.send( 2 * bet )
-	end
+  def double     ## todo/check: use a different name e.g. call/bet/flip etc. why? why not?
+    bet  = msg.value
+    flip = block.timestamp    ## semirandom
+    if flip % 2 == 0
+      return
+    else
+      msg.sender.send( 2 * bet )
+    end
+  end
 
 end # class CoinFlip
