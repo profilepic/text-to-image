@@ -24,4 +24,7 @@ Solidity Tagged Questions @ Ethereum Stack Exchange <https://ethereum.stackexcha
 
 Solidity Smart Contract Security Best Practices @ ConsenSys <https://github.com/ConsenSys/smart-contract-best-practices>
 
+Language Design Community for the EVM: Intro and Resources <https://github.com/evm-lang-design/evm-lang-design>
+
+Open Zeppelin Solidity Contracts <https://github.com/OpenZeppelin/openzeppelin-solidity/tree/master/contracts>
 
