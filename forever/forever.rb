@@ -16,7 +16,7 @@ require_relative '../lib/universum'
 
 
 
-#  Recorder — record (tatoo) a message into the blockchain (forever)
+#  Recorder — record (tattoo) a message into the blockchain (forever)
 
 class Recorder < Contract
 
@@ -27,7 +27,7 @@ class Recorder < Contract
   end
 
   ## Sends the contract a message
-  ##  to record (tatoo) into the blockchain (forever)
+  ##  to record (tattoo) into the blockchain (forever)
   def record( message )
     log Record.new( msg.sender,  message )
   end
