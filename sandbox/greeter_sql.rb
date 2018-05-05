@@ -1,5 +1,5 @@
 
-require_relative 'lib/universum'
+require_relative '../lib/universum'
 
 
 require 'active_record'

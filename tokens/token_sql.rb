@@ -1,118 +1,9 @@
+#########################################
+#  to test the contract script run:
+#   $ ruby tokens/token_sql.rb
+
 
 require_relative '../lib/universum'
-
-
-require 'active_record'
-
-
-
-
-class ActiveContract < Contract
-
-
-  def self.at( addr )
-    self.new( addr: addr )
-  end
-
-
-  def addr() @storage.addr; end
-
-
-private
-  def initialize( *args, **kwargs )
-     puts "ActiveContract.initialize:"
-     pp args
-     pp kwargs
-
-     super()   ## note: call super with NO args for now - todo/fix: change to kwargs too - why? why not?
-
-     puts "hello from ActiveContract.initialize"
-
-     if kwargs[:addr]
-       ## try to restore/load state
-       addr = kwargs[:addr]
-       Connection.for( addr )
-
-       @storage = self.class::Storage.find_by!( addr: addr )
-     else
-       ## else init state
-       addr = "0x#{Time.now.to_i}#{rand(100)}"   ## use / hard-code '0x7777' - why? why not?
-       Connection.for( addr )
-
-       @storage = self.class::Storage.new
-       @storage.addr = addr
-
-       if kwargs.empty?
-         on_create( *args )    ## change to on_init or ?? - why? why not?
-       else
-         if args.empty?
-           on_create( kwargs )  ## allow (pass along) just kwargs
-         else
-           on_create( *args, kwargs )
-         end
-       end
-       @storage.save   ## note: do NOT forget to save the state!!!
-     end
-
-     pp @storage
-   end
-end
-
-
-class Connection   ## note: connection "manager" is a "dummy" for now
-
-  def self.for( addr )
-    @@con ||= {}
-    c = @@con[addr]
-    if c
-      puts "+++++ storage ++++++++++++++++++++++++++++++++++++"
-      puts "+++ reuse database connection for address #{addr}"
-    else
-      puts "+++++++ storage +++++++++++++++++++++++++++++++++++++++++++++++++"
-      puts "+++ bingo! new address #{addr} - prepare new database (storage)"
-      @@con[addr] = true
-    end
-  end
-
-end  ## Connection
-
-
-
-
-class GreeterStorage
-  def self.up
-    ActiveRecord::Schema.define do
-      create_table :greeter_storages do |t|
-        t.string  :addr,       null: false
-        t.string  :greeting
-      end
-    end  # Schema.define
-  end # method up
-end # class
-
-
-class Greeter < ActiveContract
-
-  class Storage < ActiveRecord::Base
-     self.table_name = 'greeter_storages'
-  end
-
-
-  def self.create( greeting )
-    self.new( greeting )
-  end
-
-  def on_create( greeting )
-    @storage.greeting = greeting
-  end
-
-
-
-  def greet
-    @storage.greeting
-  end
-end # class Greeter
-
 
 
 
@@ -174,10 +65,8 @@ class Token < ActiveContract
   end
 
 
-
-  class Storage < ActiveRecord::Base
-     self.table_name = 'token_storages'
-  end
+  ####################################
+  # Storage (a.k.a. SQL Database)
 
   class Balance < ActiveRecord::Base
      self.table_name = 'token_balances'
@@ -185,6 +74,17 @@ class Token < ActiveContract
 
   class Allowance < ActiveRecord::Base
      self.table_name = 'token_allowances'
+  end
+
+  # use "convenience" helpers for array-like (e.g. []) access to mappings
+  BalanceMapping   = Mapping.create( Balance, :key )
+  AllowanceMapping = Mapping.create( Mapping.create( Allowance, :key2 ), :key1 )
+
+  class Storage < ActiveRecord::Base
+     self.table_name = 'token_storages'
+
+     def balances()    BalanceMapping.new( addr: addr ); end
+     def allowances()  AllowanceMapping.new( addr: addr ); end
   end
 
 
@@ -200,9 +100,7 @@ class Token < ActiveContract
     @storage.total_supply =  initial_supply * (10 ** decimals)
 
     ##  @balances[msg.sender]  =  @storage.total_supply
-    b = Balance.new
-    b.addr  = addr
-    b.key   = msg.sender
+    b       = @storage.balances[ msg.sender ]
     b.value = @storage.total_supply
     b.save
   end
@@ -212,8 +110,7 @@ class Token < ActiveContract
   # What is the balance of a particular account?
   def balance_of( owner: )  ## (_owner: address) -> uint256:
     ##  note: will return 0 if not found (uses Hash.new(0) for 0 default)
-    b = Balance.find_by( addr: addr, key: owner )
-    b ? b.value : 0
+    @storage.balances[ owner ].value
   end
 
 
@@ -221,8 +118,8 @@ class Token < ActiveContract
   def transfer( to:, value: )  ## (_to: address, _value: int128(uint256)) -> bool:
     puts "transfer to: >#{to}< value: >#{value}<"
 
-    balance_from = Balance.find_or_initialize_by( addr: addr, key: msg.sender )
-    balance_to   = Balance.find_or_initialize_by( addr: addr, key: to )
+    balance_from = @storage.balances[ msg.sender ]
+    balance_to   = @storage.balances[ to ]
 
     if balance_from.value >= value &&
        balance_to.value + value >= balance_to.value
@@ -241,12 +138,13 @@ class Token < ActiveContract
     end
   end
 
+
   # Transfer allowed tokens from a specific account to another.
   def transfer_from( from:, to:, value: ) ###(_from: address, _to: address, _value: int128(uint256)) -> bool:
 
-    balance_from   = Balance.find_or_initialize_by( addr: addr, key: from )
-    balance_to     = Balance.find_or_initialize_by( addr: addr, key: to )
-    allowance_from = Allowance.find_or_initialize_by( addr: addr, key1: from, key2: msg.sender )
+    balance_from   = @storage.balances[ from ]
+    balance_to     = @storage.balances[ to ]
+    allowance_from = @storage.allowances[ from ][ msg.sender ]
 
     if value <= allowance_from.value &&
        value <= balance_from.value
@@ -256,8 +154,8 @@ class Token < ActiveContract
       balance_to.value     += value  # incease balance of to address.
 
       balance_from.save
-      allowance_from.save
       balance_to.save
+      allowance_from.save
 
       log Transfer.new( from: from, to: to, value: value )   # log transfer event.
 
@@ -281,7 +179,7 @@ class Token < ActiveContract
   #       backwards compatilibilty with contracts deployed before.
 
   def approve( spender:, value: )   ##(_spender: address, _value: int128(uint256)) -> bool:
-    allowance = Allowance.find_or_initialize_by( addr: addr, key1: msg.sender, key2: spender )
+    allowance = @storage.allowances[ msg.sender ][ spender ]
     allowance.value = value
     allowance.save
 
@@ -293,8 +191,7 @@ class Token < ActiveContract
 
   # Get the allowance an address has to spend another's token.
   def allowance( owner:, spender: )  ## _owner: address, _spender: address
-    a = Allowance.find_by( addr: addr, key1: owner, key2: spender )
-    a ? a.value : 0
+    @storage.allowances[ owner ][ spender ].value
   end
 
 end ## class Token
@@ -319,39 +216,9 @@ ActiveRecord::Base.establish_connection( adapter:  'sqlite3',
 ActiveRecord::Base.logger = Logger.new( STDOUT )  ## turn on activerecord logging to console
 
 
-GreeterStorage.up
 TokenStorage.up
 
 
-greeter = Greeter.create( 'Hello, World!' )
-pp greeter
-
-pp greeter.greet
-pp greeter.addr
-
-addr = greeter.addr   ## save addr(ess) for restore (state) from db
-
-##################
-## use/try send_transaction
-
-greeter_de = Greeter.create( 'Hallo, Welt!' )
-pp greeter_de
-pp greeter_de.addr
-
-pp greeter_de.send_transaction( :greet )
-
-
-####
-#  restore/resume greeter
-greeter2 = Greeter.at( addr )
-pp greeter2
-
-pp greeter.greet
-pp greeter.addr
-
-
-#############
-#  start testing tokens...
 
 ## sample event handler
 class EventHandler
@@ -415,5 +282,18 @@ pp Contract.msg
 pp token.transfer( to: '0x1111', value: 1 )
 pp token.balance_of( owner: '0x0000' )
 pp token.balance_of( owner: '0x1111' )
+
+
+#####################################
+## use sent_transaction style
+pp token.send_transaction( :balance_of, owner: '0x0000' )
+pp token.send_transaction( :balance_of, owner: '0x1111' )
+
+pp token.send_transaction( :transfer, to: '0x1111', value: 100 )
+pp token.send_transaction( :balance_of, owner: '0x1111' )
+
+pp token.send_transaction( :transfer, to: '0x2222', value: 200 )
+pp token.send_transaction( :balance_of, owner: '0x2222' )
+
 
 end
