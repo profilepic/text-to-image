@@ -148,18 +148,15 @@ class Token < Contract
 
   # Send `_value` tokens to `_to` from your account
   def transfer( to, value )
-    if @balances[msg.sender] >= value &&
-       @balances[to] + value >= @balances[to]
+    assert @balances[msg.sender] >= value
+    assert @balances[to] + value >= @balances[to]
 
-      @balances[msg.sender] -= value  # Subtract from the sender
-      @balances[to]         += value  # Add the same to the recipient
+    @balances[msg.sender] -= value  # Subtract from the sender
+    @balances[to]         += value  # Add the same to the recipient
 
-      log Transfer.new( msg.sender, to, value )   # log transfer event.
+    log Transfer.new( msg.sender, to, value )   # log transfer event.
 
-      true
-    else
-      false
-    end
+    true
   end
 
 ## ...
