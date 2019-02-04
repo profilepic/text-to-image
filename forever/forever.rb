@@ -10,22 +10,15 @@
 #   $ ruby forever/forever.rb
 
 
-require_relative '../lib/universum'
-
-
-
+require 'universum'
 
 
 #  Recorder — record (tattoo) a message into the blockchain (forever)
 
 class Recorder < Contract
 
-  class Record < Event
-    def initialize( from, message )   ## address _from, string _message
-      @from, @message = from, message
-    end
-  end
-
+  Record = Event.new( :from, :message )   ## type address _from, string _message
+  
   ## Sends the contract a message
   ##  to record (tattoo) into the blockchain (forever)
   def record( message )
@@ -40,21 +33,22 @@ end
 
 if __FILE__ == $0
 
-recorder = Recorder.new
-recorder
+Account[ '0x1111' ]
+Account[ '0xaaaa' ]
+Account[ '0xbbbb' ]
 
-recorder.record( 'Hello, Universum!' )
-recorder.record( 'Alice was here!' )
-recorder.record( 'Ruby rocks!')
+# genesis - create contract
+recorder = Uni.send_transaction( from: '0x1111', data: Recorder ).contract
 
+Uni.send_transaction( from: '0x1111', to: recorder, data: [:record, 'Hello, Universum!'] )
+Uni.send_transaction( from: '0xaaaa', to: recorder, data: [:record, 'Alice was here!'] )
+Uni.send_transaction( from: '0xbbbb', to: recorder, data: [:record, 'Ruby rocks!'] )
 
-##################
-## use/try send_transaction   -- change to/use transact - why? why not?
+# genesis - creae contract
+recorder_de = Uni.send_transaction( from: '0x1111', data: Recorder ).contract
 
-recorder_de = Recorder.new
-
-recorder_de.send_transaction( :record, 'Hallo, Weltall!' )
-recorder_de.send_transaction( :record, 'Alice war hier!' )
-recorder_de.send_transaction( :record, 'Ruby rockt!' )
+Uni.send_transaction( from: '0x1111', to: recorder_de, data: [:record, 'Hallo, Weltall!'] )
+Uni.send_transaction( from: '0xaaaa', to: recorder_de, data: [:record, 'Alice war hier!'] )
+Uni.send_transaction( from: '0xbbbb', to: recorder_de, data: [:record, 'Ruby rockt!'] )
 
 end
