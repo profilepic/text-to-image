@@ -18,7 +18,7 @@ class GavToken < Contract
 
   ## Endows creator of contract with 1m GAV.
   def initialize
-    @balances = {}
+    @balances = Mapping.of( Address => Money )
     @balances[msg.sender] = TOTAL_TOKENS
   end
 
@@ -127,44 +127,34 @@ Ruby (Universum Blockchain Contract Script Language) Example
 ``` ruby
 class Token < Contract
 
-  class Transfer < Event
-    def initialize( from:, to:, value: )
-      @from, @to, @value = from, to, value
-    end
-  end
-
-  class Approval < Event
-    def initialize( owner:, spender:, value: )
-      @owner, @spender, @value = owner, spender, value
-    end
-  end
-
-
-  def initialize( name:, symbol:, decimals:, initial_supply: )
+  Transfer = Event.new( :from, :to, :value )
+  Approval = Event.new( :owner, :spender, :value )
+ 
+  def initialize( name, symbol, decimals, initial_supply )
     @name     = name
     @symbol   = symbol
     @decimals = decimals
     @total_supply =  initial_supply * (10 ** decimals)
-    @balances     = Hash.new(0)    ## note: special hash (default value is 0 and NOT nil)
+    @balances     =  Mapping.of( Address => Money )
     @balances[msg.sender] = @total_supply
-    @allowed =   {}
+    @allowed      =  Mapping.of( Adress => Mapping.of( Address => Money ))
   end
 
 
   # What is the balance of a particular account?
-  def balance_of( owner: )
+  def balance_of( owner )
     @balances[owner]
   end
 
   # Send `_value` tokens to `_to` from your account
-  def transfer( to:, value: )
-    if assert( @balances[msg.sender] >= value ) &&
-       assert( @balances[to] + value >= @balances[to] )
+  def transfer( to, value )
+    if @balances[msg.sender] >= value &&
+       @balances[to] + value >= @balances[to]
 
       @balances[msg.sender] -= value  # Subtract from the sender
       @balances[to]         += value  # Add the same to the recipient
 
-      log Transfer.new( from: msg.sender, to: to, value: value )   # log transfer event.
+      log Transfer.new( msg.sender, to, value )   # log transfer event.
 
       true
     else
