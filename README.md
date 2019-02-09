@@ -1,4 +1,4 @@
-New to Universum? See the [Universum (World Computer) White Paper](https://github.com/openblockchains/universum/blob/master/WHITEPAPER.md)!
+New to Universum? See the [Universum (World Computer) White Paper](https://github.com/s6ruby/universum/blob/master/WHITEPAPER.md)!
 
 
 
@@ -12,30 +12,29 @@ for the next generation ethereum 2.0 world computer
 Ruby (Universum Blockchain Contract Script Language) Example
 
 ``` ruby
-class GavToken < Contract
+###########################
+# Gav Token Contract
 
-  TOTAL_TOKENS = 100_000_000_000
+TOTAL_TOKENS = 100_000_000_000
 
-  ## Endows creator of contract with 1m GAV.
-  def initialize
-    @balances = Mapping.of( Address => Money )
-    @balances[msg.sender] = TOTAL_TOKENS
-  end
+## Endows creator of contract with 1m GAV.
+def initialize
+  @balances = Mapping.of( Address => Money )
+  @balances[msg.sender] = TOTAL_TOKENS
+end
 
-  ## Send $((valueInmGAV / 1000).fixed(0,3)) GAV from the account of
-  ##    $(message.caller.address()), to an account accessible only by $(to.address()).
-  def send( to, value )
-    if @balances[msg.sender] >= value
-         @balances[to]         += value
-         @balances[msg.sender] -= value
-    end
-  end
+## Send $((valueInmGAV / 1000).fixed(0,3)) GAV from the account of
+##    $(message.caller.address()), to an account accessible only by $(to.address()).
+def send( to, value )
+  assert @balances[msg.sender] >= value
+  @balances[to]         += value
+  @balances[msg.sender] -= value
+end
 
-  ## getter function for the balance
-  def balance( who )
-    @balances[who]
-  end
-end # class GavToken
+## getter function for the balance
+def balance( who )
+   @balances[who]
+end
 ```
 
 vs
@@ -125,41 +124,40 @@ vs
 Ruby (Universum Blockchain Contract Script Language) Example
 
 ``` ruby
-class Token < Contract
+######################
+# Token Contract
 
-  Transfer = Event.new( :from, :to, :value )
-  Approval = Event.new( :owner, :spender, :value )
+Transfer = Event.new( :from, :to, :value )
+Approval = Event.new( :owner, :spender, :value )
  
-  def initialize( name, symbol, decimals, initial_supply )
-    @name     = name
-    @symbol   = symbol
-    @decimals = decimals
-    @total_supply =  initial_supply * (10 ** decimals)
-    @balances     =  Mapping.of( Address => Money )
-    @balances[msg.sender] = @total_supply
-    @allowed      =  Mapping.of( Adress => Mapping.of( Address => Money ))
-  end
+def initialize( name, symbol, decimals, initial_supply )
+  @name     = name
+  @symbol   = symbol
+  @decimals = decimals
+  @total_supply =  initial_supply * (10 ** decimals)
+  @balances     =  Mapping.of( Address => Money )
+  @balances[msg.sender] = @total_supply
+  @allowed      =  Mapping.of( Adress => Mapping.of( Address => Money ))
+end
 
 
-  # What is the balance of a particular account?
-  def balance_of( owner )
-    @balances[owner]
-  end
+# What is the balance of a particular account?
+def balance_of( owner )
+  @balances[owner]
+end
 
-  # Send `_value` tokens to `_to` from your account
-  def transfer( to, value )
-    assert @balances[msg.sender] >= value
-    assert @balances[to] + value >= @balances[to]
+# Send `_value` tokens to `_to` from your account
+def transfer( to, value )
+  assert @balances[msg.sender] >= value
+  assert @balances[to] + value >= @balances[to]
 
-    @balances[msg.sender] -= value  # Subtract from the sender
-    @balances[to]         += value  # Add the same to the recipient
+  @balances[msg.sender] -= value  # Subtract from the sender
+  @balances[to]         += value  # Add the same to the recipient
 
-    log Transfer.new( msg.sender, to, value )   # log transfer event.
+  log Transfer.new( msg.sender, to, value )   # log transfer event.
 
-    true
-  end
+  true
+end
 
 ## ...
-
-end # class Token
 ```
