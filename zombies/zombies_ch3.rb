@@ -104,16 +104,16 @@ end
 
 
 # @sig (uint, string) external
-def change_name( zombie_id, new_name)
+def change_name( zombie_id, new_name )
    assert @zombies[zombie_id].level >= 2
    assert msg.sender == @zombie_to_owner[zombie_id]
    @zombies[zombie_id].name = new_name
 end
 
 # @sig (uint, uint) external
-def change_dna( zombie_id, new_dna)
+def change_dna( zombie_id, new_dna )
   assert @zombies[zombie_id].level >= 20
-  assert msg.sender == @zombie_to_wwner[zombie_id]
+  assert msg.sender == @zombie_to_owner[zombie_id]
   @zombies[zombie_id].dna = new_dna
 end
 
