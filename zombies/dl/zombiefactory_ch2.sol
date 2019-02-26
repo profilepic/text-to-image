@@ -1,3 +1,6 @@
+////////////////////////////////////////////////////////////
+// see https://github.com/loomnetwork/cryptozombie-lessons/blob/master/en/2
+
 pragma solidity ^0.4.25;
 
 contract ZombieFactory {
