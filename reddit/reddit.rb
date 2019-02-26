@@ -55,7 +55,7 @@ def vote( post_id, vote )
 end
 
 def can_vote?( post_id )
-  if post_id > posts.length - 1
+  if post_id > @posts.length - 1
      return false
   end
 
