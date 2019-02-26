@@ -17,7 +17,7 @@ Post = Struct.new(
 )
 
 NewPost  = Event.new( :post_id, :owner, :description )
-NewVote  = Event.new  :post_id, :owner, :vote )
+NewVote  = Event.new( :post_id, :owner, :vote )
 
 
 def setup
