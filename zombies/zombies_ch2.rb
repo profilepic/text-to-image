@@ -44,7 +44,7 @@ def create_random_zombie( name )
 end
 
 
-# @sig( uint, uint, string)
+# @sig (uint, uint, string) public
 def feed_and_multiply( zombie_id, target_dna, species )
   assert msg.sender == @zombie_to_owner[zombie_id]
   my_zombie = @zombies[zombie_id]
@@ -72,7 +72,7 @@ end
 ##  );
 ## }
 
-# @sig (uint, uint)
+# @sig (uint, uint) public
 def feed_on_kitty( zombie_id, kitty_id )
   _,_,_,_,_,_,_,_,_, kitty_dna = @kitty_contract.get_kitty( kitty_id )
   feed_and_multiply( zombie_id, kitty_dna, "kitty" )
