@@ -18,7 +18,7 @@ Ruby (Universum Blockchain Contract Script Language) Example
 TOTAL_TOKENS = 100_000_000_000
 
 ## Endows creator of contract with 1m GAV.
-def initialize
+def setup
   @balances = Mapping.of( Address => Money )
   @balances[msg.sender] = TOTAL_TOKENS
 end
@@ -130,7 +130,7 @@ Ruby (Universum Blockchain Contract Script Language) Example
 Transfer = Event.new( :from, :to, :value )
 Approval = Event.new( :owner, :spender, :value )
  
-def initialize( name, symbol, decimals, initial_supply )
+def setup( name, symbol, decimals, initial_supply )
   @name     = name
   @symbol   = symbol
   @decimals = decimals
