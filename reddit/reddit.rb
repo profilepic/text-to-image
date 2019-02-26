@@ -39,7 +39,7 @@ end
 def vote( post_id, vote )
   post = @posts[ post_id ]
 
-  assert post.creation_date != 0, "Post does not exist");
+  assert post.creation_date != 0, "Post does not exist"
   assert post.voters[msg.sender] == Ballot.none, "You already voted on this post"
 
   ballot = Ballot(vote)
