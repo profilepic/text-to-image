@@ -11,29 +11,22 @@
 require_relative '../lib/universum'
 
 
-class Mortal < Contract
-
-  def initialize
-    @owner = msg.sender
-  end
-
-  ## Function to recover the funds on the contract
-  def kill
-    destroy( @owner )  if msg.sender == @owner
-  end
-end # class Mortal
-
-
 class  Greeter < Mortal
 
   def initialize( greeting )
-    super()   # note: must call super on base class; NOT auto-magic
+    @owner    = msg.sender
     @greeting = greeting
   end
 
   def greet
     @greeting
   end
+
+  ## Function to recover the funds on the contract
+  def kill
+    selfdestruct( @owner )  if msg.sender == @owner
+  end
+
 end # class Greeter
 
 
