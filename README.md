@@ -127,8 +127,8 @@ Ruby (Universum Blockchain Contract Script Language) Example
 ######################
 # Token Contract
 
-Transfer = Event.new( :from, :to, :value )
-Approval = Event.new( :owner, :spender, :value )
+event :Transfer, :from, :to, :value
+event :Approval, :owner, :spender, :value
  
 def setup( name, symbol, decimals, initial_supply )
   @name     = name
