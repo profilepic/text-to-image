@@ -9,8 +9,8 @@ Yes, you can! Generate your own 24×24 pixel smiley images (off-blockchain) with
 
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/smileys](https://rubygems.org/gems/smileys)
 * rdoc  :: [rubydoc.info/gems/smileys](http://rubydoc.info/gems/smileys)
 
