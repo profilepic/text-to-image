@@ -16,7 +16,7 @@ Hoe.spec 'backgrounds' do
   self.summary = "backgrounds - generate your own unique pixel art background images (off chain) from text attributes (via built-in spritesheets); incl. color stripes, gradients, and more"
   self.description = summary
 
-  self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
+  self.urls    = { home: 'https://github.com/profilepic/text-to-image' }
 
   self.author  = 'Gerald Bauer'
   self.email   = 'wwwmake@googlegroups.com'

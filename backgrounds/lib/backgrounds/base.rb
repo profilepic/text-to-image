@@ -4,8 +4,8 @@ require 'spritesheet/base'
 
 
 ## our own code
-require 'backgrounds/version'    # note: let version always go first
-require 'backgrounds/image'
+require_relative 'backgrounds/version'    # note: let version always go first
+require_relative 'backgrounds/image'
 
 
 

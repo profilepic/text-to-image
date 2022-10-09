@@ -1,11 +1,10 @@
 ## 3rd party
-require 'backgrounds/base'
 require 'artfactory/base'
 
 
 
 ## our own code
-require 'moonbirds/version'    # note: let version always go first
+require_relative 'moonbirds/version'    # note: let version always go first
 
 
 

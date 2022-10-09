@@ -1,32 +1,43 @@
-## 3rd party
-require 'pixelart/base'
+## our own "3rd" party gems
+require 'artfactory/base'
 
 
 
 ## our own code
-require 'belles/version'    # note: let version always go first
+require_relative 'belles/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Belles
-  class Image < Pixelart::Image; end
-end
 
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
+module Belle
 
-module Belles
+  class Spritesheet
+    def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Belles.root}/config/spritesheet.png",
+                                             "#{Pixelart::Module::Belles.root}/config/spritesheet.csv",
+                                              width:  24,
+                                              height: 24 )
+    end
 
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
-                                             width:  24,
-                                             height: 24 )
-  end
+    def self.find_by( name: )  ## return archetype/attribute image by name
+       builtin.find_by( name: name )
+    end
+  end  # class Spritesheet
+  ## add convenience (alternate spelling) alias - why? why not?
+  SpriteSheet = Spritesheet
+  Sheet       = Spritesheet
+  Sprite      = Spritesheet
 
 
-  class Image
-     ## before callback/patch  for hats
+
+  class Image < Pixelart::Image
+
+    def self.generator
+      @generator ||= Artfactory.use(  Belle::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+
+    ## before callback/patch  for hats
      BEFORE_PATCH = ->(img, meta) {
       ## hack for hats & hair - clip head "overflow"
       ##  quick hack for headwear
@@ -45,36 +56,27 @@ module Belles
       end
   }
 
-    def self.generate( *values, background: nil )
-       img = Belles.generator.generate( *values,
-                                        background: background,
-                                        before: BEFORE_PATCH )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 24, 24, img.image )
-     end # method Image.generate
+
+   NAMES = ['belle', 'belles',
+              'bella', 'bellas',
+              'beau', 'beaus',
+              'beaux']
+    DEFAULT_ATTRIBUTES = ['Head 1',
+                          'Shades Large Dark', 'Earring',
+                          'Beanie Yellow', 'Pout 1', 'Turtleneck Rust']
+
+    def self.generate( *names )
+        generator.generate( *names, before: BEFORE_PATCH )
+    end # method Image.generate
   end # class Image
 
-
-  class Spritesheet
-    ## note: for now class used for "namespace" only
-    def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Belles.generator.find( name )
-    end
-  end  # class Spritesheet
-  ## add convenience (alternate spelling) alias - why? why not?
-  SpriteSheet = Spritesheet
-  Sheet       = Spritesheet
-  Sprite      = Spritesheet
-end #  module Belles
+end #  module Belle
 
 
 ### add some convenience shortcuts
-Beaux = Belles
-## add singular too -why? why not?
-Belle  = Belles
-Bella  = Belles
-Beau   = Belles
+Beaux  = Belle
+Beau   = Belle
+Bella  = Belle
 
 
 ###
@@ -83,4 +85,4 @@ include Pixelart
 
 
 
-puts Belles.banner    # say hello
+puts Pixelart::Module::Belles.banner    # say hello

@@ -11,12 +11,12 @@ end
 
 Hoe.spec 'belles' do
 
-  self.version = Belles::VERSION
+  self.version = Pixelart::Module::Belles::VERSION
 
   self.summary = "belles - generate your own 24×24 beau / belle pixel head images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
-  self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
+  self.urls    = { home: 'https://github.com/profilepic/text-to-image' }
 
   self.author  = 'Gerald Bauer'
   self.email   = 'wwwmake@googlegroups.com'
@@ -26,7 +26,7 @@ Hoe.spec 'belles' do
   self.history_file = 'CHANGELOG.md'
 
   self.extra_deps = [
-    ['pixelart', '>= 1.3.1'],
+    ['artfactory', '>= 0.2.0'],
   ]
 
   self.licenses = ['Public Domain']
