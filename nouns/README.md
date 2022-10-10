@@ -1,13 +1,13 @@
-The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/profilepic/originals) Presents
 
 # Nouns (Pixel Avatars)
 
-Yes, you can! Generate your own 32×32 pixel avatar images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 32×32 pixel avatar images (off-blockchain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/nouns](https://rubygems.org/gems/nouns)
 * rdoc  :: [rubydoc.info/gems/nouns](http://rubydoc.info/gems/nouns)
 
@@ -35,24 +35,20 @@ noun.save( "noun1.png")
 noun.zoom(4).save( "noun1@4x.png" )
 
 ## let's add a background
-noun = Noun::Image.generate( 'Body Grayscale 1',
-                             'Checker Bigwalk Rainbow',
-                             'Head Beer',
-                             'Glasses Square Fullblack',
-                             background: '#638596' )
+noun = noun.background( '#638596' )
 noun.save( "noun1b.png")
 noun.zoom(4).save( "noun1b@4x.png" )
 ```
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun1b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun1b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun1b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun1b@4x.png)
 
 
 
@@ -99,17 +95,17 @@ noun.zoom(4).save( "noun5@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun4.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun5.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun4.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun5.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun4@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/noun5@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun4@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/noun5@4x.png)
 
 
 And so on.
@@ -140,18 +136,18 @@ glasses_square_black_rgb.zoom( 4 ).save( "glasses_square_black_rgb@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/body_gold.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/txt_pi.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/head_weed.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/glasses_square_black_rgb.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/body_gold.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/txt_pi.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/head_weed.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/glasses_square_black_rgb.png)
 
 In 4x:
 
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/body_gold@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/txt_pi@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/head_weed@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/i/glasses_square_black_rgb@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/body_gold@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/txt_pi@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/head_weed@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/i/glasses_square_black_rgb@4x.png)
 
 And so on.
 
@@ -159,11 +155,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (32x32px)
 
-See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/nouns/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/profilepic/text-to-image/blob/master/nouns/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/nouns/config/spritesheet.png)
+![](https://github.com/profilepic/text-to-image/raw/master/nouns/config/spritesheet.png)
 
-(Source: [nouns/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/nouns/config/spritesheet.png))
+(Source: [nouns/spritesheet.png](https://github.com/profilepic/text-to-image/blob/master/nouns/config/spritesheet.png))
 
 
 

@@ -1,24 +1,41 @@
-## 3rd party
-require 'pixelart/base'
+## our own "3rd" party gems
+require 'artfactory/base'
 
 
 
 ## our own code
-require 'nouns/version'    # note: let version always go first
+require_relative 'nouns/version'    # note: let version always go first
 
 
 
-module Nouns
+module Noun
 
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
+  class Spritesheet
+
+    def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Nouns.root}/config/spritesheet.png",
+                                             "#{Pixelart::Module::Nouns.root}/config/spritesheet.csv",
                                               width:  32,
                                               height: 32 )
-  end
+    end
+
+    def self.find_by( name: )  ## return archetype/attribute image by name
+       builtin.find_by( name: name )
+    end
+  end  # class Spritesheet
+  ## add convenience (alternate spelling) alias - why? why not?
+  SpriteSheet = Spritesheet
+  Sheet       = Spritesheet
+  Sprite      = Spritesheet
 
 
   class Image < Pixelart::Image
+
+    def self.generator
+      @generator ||= Artfactory.use(  Noun::Sheet.builtin,
+                                      image_class: Image )
+    end
+
 
     NAMES = ['noun', 'nouns']
     DEFAULT_ATTRIBUTES = ['Body Grayscale 1',
@@ -26,31 +43,11 @@ module Nouns
                           'Head Beer',
                           'Glasses Square Fullblack']
 
-    def self.generate( *values )
-       img = Nouns.generator.generate( *values )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 32, 32, img.image )
+    def self.generate( *names )
+       generator.generate( *names )
      end # method Image.generate
   end # class Image
-
-
-  class Spritesheet
-    ## note: for now class used for "namespace" only
-    def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Nouns.generator.find( name )
-    end
-  end  # class Spritesheet
-  ## add convenience (alternate spelling) alias - why? why not?
-  SpriteSheet = Spritesheet
-  Sheet       = Spritesheet
-  Sprite      = Spritesheet
-end #  module Nouns
-
-
-### add some convenience shortcuts
-## add singular too -why? why not?
-Noun      = Nouns
+end #  module Noun
 
 
 
@@ -61,4 +58,4 @@ include Pixelart
 
 
 
-puts Nouns.banner    # say hello
+puts Pixelart::Module::Nouns.banner    # say hello
