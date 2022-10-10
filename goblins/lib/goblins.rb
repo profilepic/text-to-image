@@ -1,109 +1,96 @@
-## 3rd party
-require 'pixelart/base'
+## our own "3rd" party gems
+require 'artfactory/base'
 
 
 
 ## our own code
-require 'goblins/version'    # note: let version always go first
+require_relative 'goblins/version'    # note: let version always go first
 
 
-## forward define superclass for image
-module Goblins
-  class Image < Pixelart::Image; end
-end
 
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
-module Goblins
-
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet-24x24.png",
-                                             "#{root}/config/spritesheet-24x24.csv",
-                                             width:  24,
-                                             height: 24 )
-  end
-
-  class Image
-    def self.generate( *values, background: nil )
-       img = Goblins.generator.generate(  *values, background: background )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 24, 24, img.image )
-     end # method Image.generate
-  end # class Image
-
+module Goblin
 
   class Spritesheet
+    def self.builtin
+      @builtin ||= Pixelart::Spritesheet.read(  "#{Pixelart::Module::Goblins.root}/config/spritesheet-24x24.png",
+                                                "#{Pixelart::Module::Goblins.root}/config/spritesheet-24x24.csv",
+                                                 width:  24,
+                                                 height: 24 )
+    end
     ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Goblins.generator.find( name )
+       builtin.find_by( name: name )
     end
   end  # class Spritesheet
   ## add convenience (alternate spelling) alias - why? why not?
   SpriteSheet = Spritesheet
   Sheet       = Spritesheet
   Sprite      = Spritesheet
-end #  module Goblins
 
 
-### add some convenience shortcuts
-Goblinz = Goblins
-## add singular too -why? why not?
-Goblin  = Goblins
+  class Image < Pixelart::Image
 
+    def self.generator
+      @generator ||= Artfactory.use(  Goblin::Sheet.builtin,
+                                      image_class: Image )
+    end
 
+    NAMES = ['goblin', 'goblins', 'goblinz']
 
+    DEFAULT_ATTRIBUTES = ['Green', 'Teeth',
+                          '3D Glasses', 'Blue Sweater']
 
-
-## forward define superclass for image
-module Lilgoblins
-  class Image < Pixelart::Image; end
-end
-
-
-
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
-module Lilgoblins
-
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{Goblins.root}/config/spritesheet-20x20.png",
-                                             "#{Goblins.root}/config/spritesheet-20x20.csv",
-                                             width:  20,
-                                             height: 20 )
-  end
-
-  class Image
-    def self.generate( *values, background: nil )
-       img = Lilgoblins.generator.generate(  *values, background: background )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 20, 20, img.image )
+    def self.generate( *names )
+       generator.generate( *names )
      end # method Image.generate
   end # class Image
+end #  module Goblin
 
+
+
+
+module Lilgoblin
 
   class Spritesheet
+    def self.builtin
+      @builtin ||= Pixelart::Spritesheet.read(  "#{Pixelart::Module::Goblins.root}/config/spritesheet-20x20.png",
+                                                "#{Pixelart::Module::Goblins.root}/config/spritesheet-20x20.csv",
+                                                 width:  20,
+                                                 height: 20 )
+    end
     ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Lilgoblins.generator.find( name )
+       builtin.find_by( name: name )
     end
   end  # class Spritesheet
   ## add convenience (alternate spelling) alias - why? why not?
   SpriteSheet = Spritesheet
   Sheet       = Spritesheet
   Sprite      = Spritesheet
-end #  module Lilgoblins
+
+
+
+  class Image < Pixelart::Image
+    def self.generator
+      @generator ||= Artfactory.use(  Lilgoblin::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+
+    NAMES = ['lilgoblin', 'lilgoblins', 'lilgoblinz']
+
+    DEFAULT_ATTRIBUTES = ['Green', 'Orange Beanie',
+                          'Earring Silver', 'Blue Sweater']
+
+    def self.generate( *names )
+       generator.generate(  *names )
+     end # method Image.generate
+  end # class Image
+end #  module Lilgoblin
 
 
 ### add some convenience shortcuts
-LilGoblins = Lilgoblins
-LilGoblinz = Lilgoblins
-Lilgoblinz = Lilgoblins
-## add singular too -why? why not?
-LilGoblin  = Lilgoblins
-Lilgoblin  = Lilgoblins
+LilGoblin  = Lilgoblin
 
 
 
@@ -114,4 +101,4 @@ include Pixelart
 
 
 
-puts Goblins.banner    # say hello
+puts Pixelart::Module::Goblins.banner    # say hello
