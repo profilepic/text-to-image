@@ -1,13 +1,13 @@
-The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/profilepic/originals) Presents
 
 # Coolcats (Pixel Cats)
 
-Yes, you can! Generate your own 24×24 pixel cat images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 pixel cat images (off-blockchain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/coolcats](https://rubygems.org/gems/coolcats)
 * rdoc  :: [rubydoc.info/gems/coolcats](http://rubydoc.info/gems/coolcats)
 
@@ -38,15 +38,15 @@ coolcat.zoom(4).save( "coolcat3@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat3.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat3@4x.png)
 
 
 
@@ -68,15 +68,15 @@ coolcat.zoom(4).save( "coolcat6@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat4.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat5.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat6.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat4.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat5.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat6.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat4@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat5@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat6@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat4@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat5@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat6@4x.png)
 
 
 
@@ -98,15 +98,15 @@ coolcat.zoom(4).save( "coolcat9@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat7.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat8.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat9.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat7.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat8.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat9.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat7@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat8@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/coolcat9@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat7@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat8@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/coolcat9@4x.png)
 
 
 And so on.
@@ -135,17 +135,17 @@ overalls_blue.zoom( 4 ).save( "overalls_blue@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/base.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/beanie_orange.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/costume_gorilla.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/overalls_blue.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/base.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/beanie_orange.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/costume_gorilla.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/overalls_blue.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/base@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/beanie_orange@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/costume_gorilla@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/i/overalls_blue@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/base@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/beanie_orange@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/costume_gorilla@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/i/overalls_blue@4x.png)
 
 And so on.
 
@@ -153,11 +153,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (24x24px)
 
-See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/coolcats/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/profilepic/text-to-image/blob/master/coolcats/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/coolcats/config/spritesheet.png)
+![](https://github.com/profilepic/text-to-image/raw/master/coolcats/config/spritesheet.png)
 
-(Source: [coolcats/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/coolcats/config/spritesheet.png))
+(Source: [coolcats/spritesheet.png](https://github.com/profilepic/text-to-image/blob/master/coolcats/config/spritesheet.png))
 
 
 
