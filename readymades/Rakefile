@@ -11,12 +11,12 @@ end
 
 Hoe.spec 'readymades' do
 
-  self.version = Readymades::VERSION
+  self.version = Pixelart::Module::Readymades::VERSION
 
   self.summary = "readymades - generate your own 24×24 pixel punk images (off chain) from 1/1 originals incl. William Shakespare, Galileo Galilei, Mao Zedong and many other readymade public world figures and add attributes / accessories with text (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
-  self.urls    = { home: 'https://github.com/pixelartexchange/pixelart' }
+  self.urls    = { home: 'https://github.com/profilepic/text-to-image' }
 
   self.author  = 'Gerald Bauer'
   self.email   = 'wwwmake@googlegroups.com'
@@ -26,8 +26,7 @@ Hoe.spec 'readymades' do
   self.history_file = 'CHANGELOG.md'
 
   self.extra_deps = [
-    ['cryptopunks'],
-    ['backgrounds', '>= 0.2.0'],
+    ['punks', '>= 0.5.3'],
   ]
 
   self.licenses = ['Public Domain']

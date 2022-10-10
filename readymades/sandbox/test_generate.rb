@@ -107,4 +107,48 @@ punk.save( "./tmp/terminator-bg.png")
 punk.zoom(8).save( "./tmp/terminator-bg@8x.png")
 
 
+#####
+#  test readymade shortcuts
+
+
+punk = Will::Image.generate
+punk.zoom(8).save( "./tmp2/will@8x.png")
+
+punk = Will::Image.generate( '3D Glasses' )
+punk.zoom(8).save( "./tmp2/will2@8x.png")
+
+punk = Will::Image.generate( 'VR' )
+punk.zoom(8).save( "./tmp2/will3@8x.png")
+
+
+punk = Snoop::Image.generate
+punk.zoom(8).save( "./tmp2/snoop@8x.png")
+
+punk = Snoop::Image.generate( '3D Glasses' )
+punk.zoom(8).save( "./tmp2/snoop2@8x.png")
+
+punk = Snoop::Image.generate( 'VR' )
+punk.zoom(8).save( "./tmp2/snoop3@8x.png")
+
+
+punk = Bart::Image.generate
+punk.zoom(8).save( "./tmp2/bart@8x.png")
+
+punk = Bart::Image.generate( '3D Glasses')
+punk.zoom(8).save( "./tmp2/bart2@8x.png")
+
+punk = Bart::Image.generate( 'VR')
+punk.zoom(8).save( "./tmp2/bart3@8x.png")
+
+
+punk = Mao::Image.generate
+punk.zoom(8).save( "./tmp2/mao@8x.png")
+
+punk = Mao::Image.generate( '3D Glasses')
+punk.zoom(8).save( "./tmp2/mao2@8x.png")
+
+punk = Mao::Image.generate( 'VR')
+punk.zoom(8).save( "./tmp2/mao3@8x.png")
+
+
 puts "bye"

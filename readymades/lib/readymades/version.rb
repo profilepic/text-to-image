@@ -1,10 +1,12 @@
 
 
+module Pixelart
+module Module
 module Readymades
 
-  MAJOR = 0
-  MINOR = 1
-  PATCH = 3
+  MAJOR = 1
+  MINOR = 0
+  PATCH = 0
   VERSION = [MAJOR,MINOR,PATCH].join('.')
 
   def self.version
@@ -19,5 +21,7 @@ module Readymades
     File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )
   end
 
+end #  module Pixelart
+end #  module Module
 end # module Readymades
 

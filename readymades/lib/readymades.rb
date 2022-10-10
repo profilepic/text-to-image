@@ -1,24 +1,19 @@
-## 3rd party
-require 'cryptopunks'     ### todo - add/change to cryptopunks/base !!!
-require 'backgrounds/base'    ## note: incl. backgrounds for now
-                              ##   (may get pulled in by cryptopunks later with update)
+## our own "3rd" party gems
+require 'punks'     ### todo - add/change to punks/base !!!
 
 
 ## our own code
-require 'readymades/version'    # note: let version always go first
+require_relative 'readymades/version'    # note: let version always go first
 
 
 
 
-###
-## add convenience pre-configurated generatored with build-in spritesheet (see config)
-
-module Readymades
+module Readymade
 
   class Spritesheet       ## note: for now class used for "namespace" only
     def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
-      @sheet ||= Pixelart::Spritesheet.read( "#{Readymades.root}/config/spritesheet.png",
-                                             "#{Readymades.root}/config/spritesheet.csv",
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Readymades.root}/config/spritesheet.png",
+                                             "#{Pixelart::Module::Readymades.root}/config/spritesheet.csv",
                                               width:  24,
                                               height: 24 )
     end
@@ -35,6 +30,9 @@ module Readymades
 
 
   class Image < Pixelart::Image
+
+    NAMES = ['readymade', 'readymades']
+    DEFAULT_ATTRIBUTES = ['Will']
 
     def self.generate( *names )
        name       = names[0]
@@ -73,10 +71,63 @@ end #  module Readymades
 
 
 ### add some convenience shortcuts
-ReadyMades = Readymades
-## add singular too -why? why not?
-Readymade  = Readymades
-ReadyMade  = Readymades
+ReadyMade  = Readymade
+
+
+
+
+
+#### add pre-configured readymade shortcuts
+module Will
+  class Image < Pixelart::Image
+
+    NAMES = ['will', 'shakespeare',
+             'willshakespeare',
+             'williamshakespeare']
+    def self.generate( *more_names )
+       Readymade::Image.generate( 'William Shakespeare', *more_names )
+    end # method Image.generate
+  end # class Image
+end  # module Will
+Shakespeare  = Will
+
+
+module Snoop
+  class Image < Pixelart::Image
+
+    NAMES = ['snoop', 'snoopdogg']
+    def self.generate( *more_names )
+       Readymade::Image.generate( 'Snoop Dogg', *more_names )
+    end # method Image.generate
+  end # class Image
+end  # module Snoop
+Snoopdogg  = Snoop
+SnoopDogg  = Snoop
+
+module Bart
+  class Image < Pixelart::Image
+
+    NAMES = ['bart', 'simpson', 'bartsimpson']
+    def self.generate( *more_names )
+       Readymade::Image.generate( 'Bart ', *more_names )
+    end # method Image.generate
+  end # class Image
+end  # module Bart
+Simpson  = Bart
+
+module Mao
+  class Image < Pixelart::Image
+
+    NAMES = ['mao', 'maozedong']
+    def self.generate( *more_names )
+       Readymade::Image.generate( 'Mao Zedong', *more_names )
+    end # method Image.generate
+  end # class Image
+end  # module Mao
+Maozedong  = Mao
+MaoZedong  = Mao
+
+
 
 
 
@@ -87,4 +138,4 @@ include Pixelart
 
 
 
-puts Readymades.banner    # say hello
+puts Pixelart::Module::Readymades.banner    # say hello
