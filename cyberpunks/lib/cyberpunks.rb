@@ -1,28 +1,25 @@
-## 3rd party
-require 'pixelart/base'
-require 'backgrounds/base'
+## our own "3rd" party gems
 require 'artfactory/base'
 
 
 
 ## our own code
-require 'cyberpunks/version'    # note: let version always go first
+require_relative 'cyberpunks/version'    # note: let version always go first
 
 
 
 ###
 ## add convenience pre-configurated generatored with build-in spritesheet (see config)
-module Cyberpunks
+module Cyberpunk
   class Spritesheet
     def self.builtin
-      @builtin ||= Pixelart::Spritesheet.read(  "#{Cyberpunks.root}/config/spritesheet.png",
-                                                "#{Cyberpunks.root}/config/spritesheet.csv",
+      @builtin ||= Pixelart::Spritesheet.read(  "#{Pixelart::Module::Cyberpunks.root}/config/spritesheet.png",
+                                                "#{Pixelart::Module::Cyberpunks.root}/config/spritesheet.csv",
                                                  width:  32,
                                                  height: 32 )
     end
     ## note: for now class used for "namespace" only
     def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
        builtin.find_by( name: name )
     end
   end  # class Spritesheet
@@ -34,22 +31,29 @@ module Cyberpunks
 
   class Image < Pixelart::Image
     def self.generator
-      @generator ||= Artfactory.use(  Cyberpunks::Sheet.builtin,
+      @generator ||= Artfactory.use(  Cyberpunk::Sheet.builtin,
                                       image_class: Image )
     end
+
+
+    NAMES = ['cyberpunk', 'cyberpunks']
+
+    DEFAULT_ATTRIBUTES = ['Human 9',
+     'Smile',
+     'Delicate',
+     'Femme Wide',
+     'Large Hoop Earrings',
+     'Messy Bun']
 
     def self.generate( *names )
        generator.generate( *names )
     end
   end # class Image
-end #  module Cyberpunks
+end #  module Cyberpunk
 
 
 ### add some convenience shortcuts
-CyberPunks = Cyberpunks
-## add singular too -why? why not?
-Cyberpunk  = Cyberpunks
-CyberPunk  = Cyberpunks
+CyberPunk  = Cyberpunk
 
 
 
@@ -60,6 +64,4 @@ include Pixelart
 
 
 
-
-
-puts Cyberpunks.banner    # say hello
+puts Pixelart::Module::Cyberpunks.banner    # say hello

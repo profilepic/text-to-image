@@ -1,14 +1,14 @@
-The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/profilepic/originals) Presents
 
 # Cyberpunks (Pixel Avatars)
 
 
-Yes, you can! Generate your own cyberpunk (blade runner) sci-fi 32×32 pixel avatar images (off chain) from 100+ text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own cyberpunk (blade runner) sci-fi 32×32 pixel avatar images (off-blockchain) from 100+ text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/cyberpunks](https://rubygems.org/gems/cyberpunks)
 * rdoc  :: [rubydoc.info/gems/cyberpunks](http://rubydoc.info/gems/cyberpunks)
 
@@ -49,15 +49,15 @@ punk.zoom(4).save( "punk1c@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1c.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk1c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk1c@4x.png)
 
 
 
@@ -87,15 +87,15 @@ punk.zoom(4).save( "punk2c@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2c.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk2c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk2c@4x.png)
 
 
 ```ruby
@@ -122,15 +122,15 @@ punk.zoom(4).save( "punk3c@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3c.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk3c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk3c@4x.png)
 
 
 
@@ -156,15 +156,15 @@ punk.zoom(4).save( "punk4c@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4c.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/punk4c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/punk4c@4x.png)
 
 
 And so on.
@@ -195,18 +195,18 @@ jack_o_lantern.zoom( 4 ).save( "jack_o_lantern@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/skull_gold.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/egirl_hair.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/sun_glasses.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/jack_o_lantern.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/skull_gold.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/egirl_hair.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/sun_glasses.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/jack_o_lantern.png)
 
 In 4x:
 
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/skull_gold@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/egirl_hair@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/sun_glasses@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/i/jack_o_lantern@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/skull_gold@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/egirl_hair@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/sun_glasses@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/i/jack_o_lantern@4x.png)
 
 And so on.
 
@@ -215,11 +215,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (32x32px)
 
-See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/cyberpunks/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/profilepic/text-to-image/blob/master/cyberpunks/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/cyberpunks/config/spritesheet.png)
+![](https://github.com/profilepic/text-to-image/raw/master/cyberpunks/config/spritesheet.png)
 
-(Source: [cyperpunks/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/cyberpunks/config/spritesheet.png))
+(Source: [cyperpunks/spritesheet.png](https://github.com/profilepic/text-to-image/blob/master/cyberpunks/config/spritesheet.png))
 
 
 

@@ -5,24 +5,6 @@
 
 require 'cyberpunks'
 
-###
-#  try attribute lookup
-
-skull_gold       = Cyberpunk::Sheet.find_by( name: 'Skull Gold' )
-egirl_hair       = Cyberpunk::Sheet.find_by( name: 'E-Girl Hair' )
-sun_glasses      = Cyberpunk::Sheet.find_by( name: 'Sun Glasses' )
-jack_o_lantern   = Cyberpunk::Sheet.find_by( name: "Jack-O'-Lantern" )
-
-skull_gold.save( "./tmp/skull_gold.png" )
-egirl_hair.save( "./tmp/egirl_hair.png" )
-sun_glasses.save( "./tmp/sun_glasses.png" )
-jack_o_lantern.save( "./tmp/jack_o_lantern.png" )
-
-skull_gold.zoom( 4 ).save( "./tmp/skull_gold@4x.png" )
-egirl_hair.zoom( 4 ).save( "./tmp/egirl_hair@4x.png" )
-sun_glasses.zoom( 4 ).save( "./tmp/sun_glasses@4x.png" )
-jack_o_lantern.zoom( 4 ).save( "./tmp/jack_o_lantern@4x.png" )
-
 
 ####
 #  try generate
@@ -130,6 +112,27 @@ punk.zoom(4).save( "tmp/punk4b@4x.png" )
 punk = base.background( '#638596' )
 punk.save( "tmp/punk4c.png")
 punk.zoom(4).save( "tmp/punk4c@4x.png" )
+
+
+
+
+###
+#  try attribute lookup
+
+skull_gold       = Cyberpunk::Sheet.find_by( name: 'Skull Gold' )
+egirl_hair       = Cyberpunk::Sheet.find_by( name: 'E-Girl Hair' )
+sun_glasses      = Cyberpunk::Sheet.find_by( name: 'Sun Glasses' )
+jack_o_lantern   = Cyberpunk::Sheet.find_by( name: "Jack-O'-Lantern" )
+
+skull_gold.save( "./tmp/skull_gold.png" )
+egirl_hair.save( "./tmp/egirl_hair.png" )
+sun_glasses.save( "./tmp/sun_glasses.png" )
+jack_o_lantern.save( "./tmp/jack_o_lantern.png" )
+
+skull_gold.zoom( 4 ).save( "./tmp/skull_gold@4x.png" )
+egirl_hair.zoom( 4 ).save( "./tmp/egirl_hair@4x.png" )
+sun_glasses.zoom( 4 ).save( "./tmp/sun_glasses@4x.png" )
+jack_o_lantern.zoom( 4 ).save( "./tmp/jack_o_lantern@4x.png" )
 
 
 puts "bye"

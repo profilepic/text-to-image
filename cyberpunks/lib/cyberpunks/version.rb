@@ -1,9 +1,10 @@
 
-
+module Pixelart
+module Module
 module Cyberpunks
 
-  MAJOR = 0
-  MINOR = 2
+  MAJOR = 1
+  MINOR = 0
   PATCH = 0
   VERSION = [MAJOR,MINOR,PATCH].join('.')
 
@@ -19,5 +20,7 @@ module Cyberpunks
     File.expand_path( File.dirname(File.dirname(File.dirname(__FILE__))) )
   end
 
+end  # module Pixelart
+end  # module Module
 end # module Cyberpunks
 
