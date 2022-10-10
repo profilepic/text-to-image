@@ -6,38 +6,6 @@
 require 'moonbirds'
 
 
-###
-#  try attribute lookup
-
-_3d_glasses   = Moonbird::Sheet.find_by( name: '3D Glasses' )
-beanie        = Moonbird::Sheet.find_by( name: 'Beanie' )
-chromie       = Moonbird::Sheet.find_by( name: 'Chromie' )
-mcdonalds_red = Moonbird::Sheet.find_by( name: "McDonald's Red" )
-
-_3d_glasses.save( "./tmp/3d_glasses-42x42.png" )
-beanie.save( "./tmp/beanie-42x42.png" )
-chromie.save( "./tmp/chromie-42x42.png" )
-mcdonalds_red.save( "./tmp/mcdonalds_red-42x42.png" )
-
-_3d_glasses.zoom( 4 ).save( "./tmp/3d_glasses-42x42@4x.png" )
-beanie.zoom( 4 ).save( "./tmp/beanie-42x42@4x.png" )
-chromie.zoom( 4 ).save( "./tmp/chromie-42x42@4x.png" )
-mcdonalds_red.zoom( 4 ).save( "./tmp/mcdonalds_red-42x42@4x.png" )
-
-
-_3d_glasses   = Moonbirdie::Sheet.find_by( name: '3D Glasses' )
-beanie        = Moonbirdie::Sheet.find_by( name: 'Beanie' )
-chromie       = Moonbirdie::Sheet.find_by( name: 'Chromie' )
-
-_3d_glasses.save( "./tmp/3d_glasses-24x24.png" )
-beanie.save( "./tmp/beanie-24x24.png" )
-chromie.save( "./tmp/chromie-24x24.png" )
-
-_3d_glasses.zoom( 4 ).save( "./tmp/3d_glasses-24x24@4x.png" )
-beanie.zoom( 4 ).save( "./tmp/beanie-24x24@4x.png" )
-chromie.zoom( 4 ).save( "./tmp/chromie-24x24@4x.png" )
-
-
 
 ####
 #  try generate
@@ -110,6 +78,41 @@ birdie = birdie.background('ukraine')
 birdie.save( "./tmp/moonbirdie3b.png" )
 birdie.zoom( 4 ).save( "./tmp/moonbirdie3b@4x.png" )
 birdie.zoom( 8 ).save( "./tmp/moonbirdie3b@8x.png" )
+
+
+
+###
+#  try attribute lookup
+
+_3d_glasses   = Moonbird::Sheet.find_by( name: '3D Glasses' )
+beanie        = Moonbird::Sheet.find_by( name: 'Beanie' )
+chromie       = Moonbird::Sheet.find_by( name: 'Chromie' )
+mcdonalds_red = Moonbird::Sheet.find_by( name: "McDonald's Red" )
+
+_3d_glasses.save( "./tmp/3d_glasses-42x42.png" )
+beanie.save( "./tmp/beanie-42x42.png" )
+chromie.save( "./tmp/chromie-42x42.png" )
+mcdonalds_red.save( "./tmp/mcdonalds_red-42x42.png" )
+
+_3d_glasses.zoom( 4 ).save( "./tmp/3d_glasses-42x42@4x.png" )
+beanie.zoom( 4 ).save( "./tmp/beanie-42x42@4x.png" )
+chromie.zoom( 4 ).save( "./tmp/chromie-42x42@4x.png" )
+mcdonalds_red.zoom( 4 ).save( "./tmp/mcdonalds_red-42x42@4x.png" )
+
+
+_3d_glasses   = Moonbirdie::Sheet.find_by( name: '3D Glasses' )
+beanie        = Moonbirdie::Sheet.find_by( name: 'Beanie' )
+chromie       = Moonbirdie::Sheet.find_by( name: 'Chromie' )
+
+_3d_glasses.save( "./tmp/3d_glasses-24x24.png" )
+beanie.save( "./tmp/beanie-24x24.png" )
+chromie.save( "./tmp/chromie-24x24.png" )
+
+_3d_glasses.zoom( 4 ).save( "./tmp/3d_glasses-24x24@4x.png" )
+beanie.zoom( 4 ).save( "./tmp/beanie-24x24@4x.png" )
+chromie.zoom( 4 ).save( "./tmp/chromie-24x24@4x.png" )
+
+
 
 
 puts "bye"

@@ -1,4 +1,4 @@
-The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/profilepic/originals) Presents
 
 # Moonbirds & Lil' Moonbirdies (Pixel Owls 'n' Friends)
 
@@ -6,8 +6,8 @@ Yes, you can! Generate your own 42×42 (or lil' 24×24) pixel owl images (off-bl
 
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/moonbirds](https://rubygems.org/gems/moonbirds)
 * rdoc  :: [rubydoc.info/gems/moonbirds](http://rubydoc.info/gems/moonbirds)
 
@@ -67,19 +67,19 @@ bird.zoom( 4 ).save( "moonbird1e@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1b.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1c.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1d.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1e.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1d.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1e.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1b@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1c@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1d@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird1e@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1d@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird1e@4x.png)
 
 
 
@@ -101,13 +101,13 @@ bird.zoom( 4 ).save( "moonbird2b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird2b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird2b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird2b@4x.png)
 
 
 
@@ -125,13 +125,13 @@ bird.zoom( 4 ).save( "moonbird3b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird3b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbird3b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbird3b@4x.png)
 
 
 And so on.
@@ -243,13 +243,13 @@ birdie.zoom( 4 ).save( "moonbirdie1b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie1b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie1b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie1b@4x.png)
 
 
 ```ruby
@@ -270,13 +270,13 @@ birdie.zoom( 4 ).save( "moonbirdie2b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie2b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie2b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie2b@4x.png)
 
 
 
@@ -293,13 +293,13 @@ birdie.zoom( 4 ).save( "moonbirdie3b@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie3b.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/moonbirdie3b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/moonbirdie3b@4x.png)
 
 
 And so on.
@@ -331,17 +331,17 @@ mcdonalds_red.zoom( 4 ).save( "mcdonalds_red@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/3d_glasses.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/beanie.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/chromie.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/mcdonalds_red.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/3d_glasses.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/beanie.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/chromie.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/mcdonalds_red.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/3d_glasses@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/beanie@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/chromie@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/i/mcdonalds_red@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/3d_glasses@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/beanie@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/chromie@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/i/mcdonalds_red@4x.png)
 
 And so on.
 
@@ -351,32 +351,32 @@ And so on.
 
 **42×42px**
 
-See the [spritesheet-42x42.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet-42x42.csv](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet-42x42.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet-42x42.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/config/spritesheet-42x42.png)
 
-(Source: [moonbirds/spritesheet-42x42.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-42x42.png))
+(Source: [moonbirds/spritesheet-42x42.png](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet-42x42.png))
 
 
 
 **42×42px (V1 / Official)**
 
-See the [spritesheet_v1-42x42.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet_v1-42x42.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet_v1-42x42.csv](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet_v1-42x42.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet_v1-42x42.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/config/spritesheet_v1-42x42.png)
 
-(Source: [moonbirds/spritesheet_v1-42x42.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet_v1-42x42.png))
+(Source: [moonbirds/spritesheet_v1-42x42.png](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet_v1-42x42.png))
 
 
 
 
 **Lil' 24×24px**
 
-See the [spritesheet-24x24.csv](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-24x24.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet-24x24.csv](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet-24x24.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/moonbirds/config/spritesheet-24x24.png)
+![](https://github.com/profilepic/text-to-image/raw/master/moonbirds/config/spritesheet-24x24.png)
 
-(Source: [moonbirds/spritesheet-24x24.png](https://github.com/pixelartexchange/pixelart/blob/master/moonbirds/config/spritesheet-24x24.png))
+(Source: [moonbirds/spritesheet-24x24.png](https://github.com/profilepic/text-to-image/blob/master/moonbirds/config/spritesheet-24x24.png))
 
 
 
