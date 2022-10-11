@@ -21,10 +21,85 @@ Yes, you can! Generate your own 24×24 pixel punk images (off-blockchain) from 1
 Let's generate some super-rare never-before-seen
 readymade 1/1 pixel punks:
 
-...
+```ruby
+require 'smileys'
+
+punk = Will::Image.generate
+punk.save( "will.png")
+
+punk = Will::Image.generate( '3D Glasses' )
+punk.save( "will2.png")
+
+punk = Will::Image.generate( 'VR' )
+punk.save( "will3.png")
+```
+
+Voila!
+
+![](i/will.png)
+![](i/will2.png)
+![](i/will3.png)
+
+
+```ruby
+punk = Mao::Image.generate
+punk.save( "mao.png")
+
+punk = Mao::Image.generate( '3D Glasses')
+punk.save( "mao2.png")
+
+punk = Mao::Image.generate( 'VR')
+punk.save( "mao3.png")
+```
+
+Voila!
+
+![](i/mao.png)
+![](i/mao2.png)
+![](i/mao3.png)
 
 
 
+```ruby
+punk = Bart::Image.generate
+punk.save( "bart.png")
+
+punk = Bart::Image.generate( '3D Glasses')
+punk.save( "bart2.png")
+
+punk = Bart::Image.generate( 'VR')
+punk.save( "bart3.png")
+```
+
+Voila!
+
+![](i/bart.png)
+![](i/bart2.png)
+![](i/bart3.png)
+
+
+
+
+```ruby
+punk = Snoop::Image.generate
+punk.save( "snoop.png")
+
+punk = Snoop::Image.generate( '3D Glasses' )
+punk.save( "snoop2.png")
+
+punk = Snoop::Image.generate( 'VR' )
+punk.save( "snoop3.png")
+```
+
+Voila!
+
+![](i/snoop.png)
+![](i/snoop2.png)
+![](i/snoop3.png)
+
+
+
+And so on.
 
 
 ## Questions? Comments?

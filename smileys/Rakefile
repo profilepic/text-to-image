@@ -13,7 +13,7 @@ Hoe.spec 'smileys' do
 
   self.version = Pixelart::Module::Smileys::VERSION
 
-  self.summary = "smileys - generate your own 24×24 pixel smiley images (off-blockchain) with text (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more"
+  self.summary = "smileys - generate your own 24×24 pixel smiley images (off-blockchain) from text attributes (via built-in spritesheets); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/profilepic/text-to-image' }
