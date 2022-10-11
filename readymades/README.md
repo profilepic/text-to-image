@@ -36,9 +36,9 @@ punk.save( "will3.png")
 
 Voila!
 
-![](i/will.png)
-![](i/will2.png)
-![](i/will3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will3.png)
 
 
 ```ruby
@@ -54,9 +54,9 @@ punk.save( "mao3.png")
 
 Voila!
 
-![](i/mao.png)
-![](i/mao2.png)
-![](i/mao3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao3.png)
 
 
 
@@ -73,9 +73,9 @@ punk.save( "bart3.png")
 
 Voila!
 
-![](i/bart.png)
-![](i/bart2.png)
-![](i/bart3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart3.png)
 
 
 
@@ -93,9 +93,9 @@ punk.save( "snoop3.png")
 
 Voila!
 
-![](i/snoop.png)
-![](i/snoop2.png)
-![](i/snoop3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop3.png)
 
 
 
