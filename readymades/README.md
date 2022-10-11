@@ -22,7 +22,7 @@ Let's generate some super-rare never-before-seen
 readymade 1/1 pixel punks:
 
 ```ruby
-require 'smileys'
+require 'readymades'
 
 punk = Will::Image.generate
 punk.save( "will.png")
