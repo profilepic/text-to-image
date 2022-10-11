@@ -53,5 +53,28 @@ smiley.save( "./tmp/smiley2c.png" )
 smiley.zoom( 4 ).save( "./tmp/smiley2c@4x.png" )
 
 
+
+####
+# try 15px diameter variant
+
+smiley  = Smiley15::Image.generate( "Yellow", "Face 1" )
+smiley.save( "./tmp15/smiley1.png" )
+smiley.zoom( 4 ).save( "./tmp15/smiley1@4x.png" )
+
+base = smiley
+
+smiley = base.background( 'ukraine' )
+smiley.save( "./tmp15/smiley1.1.png" )
+smiley.zoom( 4 ).save( "./tmp15/smiley1.1@4x.png" )
+
+smiley = base.background( 'rainbow' )
+smiley.save( "./tmp15/smiley1.2.png" )
+smiley.zoom( 4 ).save( "./tmp15/smiley1.2@4x.png" )
+
+
+
+
+
+
 puts "bye"
 
