@@ -1,25 +1,42 @@
-## 3rd party
-require 'pixelart/base'
+## our own "3rd" party gems
+require 'artfactory/base'
 
 
 
 ## our own code
-require 'shibainus/version'    # note: let version always go first
+require_relative 'shibainus/version'    # note: let version always go first
 
 
-module Shibainus
 
-  def self.generator
-    @generator ||= Pixelart::Generator.new(  "#{root}/config/spritesheet.png",
-                                             "#{root}/config/spritesheet.csv",
-                                             width:  24,
-                                             height: 24 )
-  end
+module Shibainu
+
+  class Spritesheet
+   def self.builtin    ### check: use a different name e.g. default,standard,base or such - why? why not?
+      @sheet ||= Pixelart::Spritesheet.read( "#{Pixelart::Module::Shibainus.root}/config/spritesheet.png",
+                                             "#{Pixelart::Module::Shibainus.root}/config/spritesheet.csv",
+                                              width:  24,
+                                              height: 24 )
+    end
+
+    def self.find_by( name: )  ## return archetype/attribute image by name
+       builtin.find_by( name: name )
+    end
+  end  # class Spritesheet
+  ## add convenience (alternate spelling) alias - why? why not?
+  SpriteSheet = Spritesheet
+  Sheet       = Spritesheet
+  Sprite      = Spritesheet
 
 
 
   class Image < Pixelart::Image
-     ## before callback/patch  for hats
+
+   def self.generator
+      @generator ||= Artfactory.use(  Shibainu::Sheet.builtin,
+                                      image_class: Image )
+    end
+
+   ## before callback/patch  for hats
      BEFORE_PATCH = ->(img, meta) {
       ## hack for doge hats - cut off / clean top (ears)
        if ['beanie',
@@ -47,40 +64,21 @@ module Shibainus
              'shibainu', 'shibainus']
     DEFAULT_ATTRIBUTES = ['Classic']
 
-    def self.generate( *values )
-
-      img = Shibainus.generator.generate( *values,
-                                          before: BEFORE_PATCH )
-       ## note: unwrap inner image before passing on to c'tor (requires ChunkyPNG image for now)
-       new( 24, 24, img.image )
+    def self.generate( *names )
+      generator.generate( *names, before: BEFORE_PATCH )
      end # method Image.generate
   end # class Image
+end #  module Shibainu
 
-
-  class Spritesheet
-    ## note: for now class used for "namespace" only
-    def self.find_by( name: )  ## return archetype/attribute image by name
-       # note: pass along name as q (query string)
-       Shibainus.generator.find( name )
-    end
-  end  # class Spritesheet
-  ## add convenience (alternate spelling) alias - why? why not?
-  SpriteSheet = Spritesheet
-  Sheet       = Spritesheet
-  Sprite      = Spritesheet
-end #  module Coolcats
 
 
 ### add some convenience shortcuts
-ShibaInus = Shibainus
-## add singular too -why? why not?
-ShibaInu  = Shibainus
-Shibainu  = Shibainus
-Shiba     = Shibainus
-Shib      = Shibainus
+ShibaInu  = Shibainu
+Shiba     = Shibainu
+Shib      = Shibainu
 
 ## add doge alias/shortcut too - why? why not?
-Doge      = Shibainus
+Doge      = Shibainu
 
 
 ###
@@ -89,4 +87,4 @@ include Pixelart
 
 
 
-puts Shibainus.banner    # say hello
+puts Pixelart::Module::Shibainus.banner    # say hello

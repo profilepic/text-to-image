@@ -1,12 +1,12 @@
-The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/pixelartexchange/originals) Presents
+The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com/profilepic/originals) Presents
 
 # Shiba Inus (Pixel Doge)
 
-Yes, you can! Generate your own 24×24 pixel shiba inu doge images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 pixel shiba inu doge images (off-blockchain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
-* home  :: [github.com/pixelartexchange/pixelart](https://github.com/pixelartexchange/pixelart)
-* bugs  :: [github.com/pixelartexchange/pixelart/issues](https://github.com/pixelartexchange/pixelart/issues)
+* home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)
+* bugs  :: [github.com/profilepic/text-to-image/issues](https://github.com/profilepic/text-to-image/issues)
 * gem   :: [rubygems.org/gems/shibainus](https://rubygems.org/gems/shibainus)
 * rdoc  :: [rubydoc.info/gems/shibainus](http://rubydoc.info/gems/shibainus)
 
@@ -40,17 +40,17 @@ doge.zoom(4).save( "doge4@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge1.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge2.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge3.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge4.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge3.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge4.png)
 
 In 4x:
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge1@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge2@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge3@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/doge4@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge3@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/doge4@4x.png)
 
 
 And so on.
@@ -79,18 +79,18 @@ big_shades.zoom( 4 ).save( "big_shades@4x.png" )
 
 Voila!
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/classic.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/crazy_hair.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/beanie.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/big_shades.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/classic.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/crazy_hair.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/beanie.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/big_shades.png)
 
 In 4x:
 
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/classic@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/crazy_hair@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/beanie@4x.png)
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/i/big_shades@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/classic@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/crazy_hair@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/beanie@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/i/big_shades@4x.png)
 
 And so on.
 
@@ -98,11 +98,11 @@ And so on.
 
 ## Appendix - All Built-In Spritesheet Attributes (24x24px)
 
-See the [spritesheet.csv](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.csv) dataset for all attribute names (w/ categories).
+See the [spritesheet.csv](https://github.com/profilepic/text-to-image/blob/master/shibainus/config/spritesheet.csv) dataset for all attribute names (w/ categories).
 
-![](https://github.com/pixelartexchange/pixelart/raw/master/shibainus/config/spritesheet.png)
+![](https://github.com/profilepic/text-to-image/raw/master/shibainus/config/spritesheet.png)
 
-(Source: [shibainus/spritesheet.png](https://github.com/pixelartexchange/pixelart/blob/master/shibainus/config/spritesheet.png))
+(Source: [shibainus/spritesheet.png](https://github.com/profilepic/text-to-image/blob/master/shibainus/config/spritesheet.png))
 
 
 
