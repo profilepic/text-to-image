@@ -112,42 +112,55 @@ punk.zoom(8).save( "./tmp/terminator-bg@8x.png")
 
 
 punk = Will::Image.generate
+punk.save( "./tmp2/will.png")
 punk.zoom(8).save( "./tmp2/will@8x.png")
 
 punk = Will::Image.generate( '3D Glasses' )
+punk.save( "./tmp2/will2.png")
 punk.zoom(8).save( "./tmp2/will2@8x.png")
 
 punk = Will::Image.generate( 'VR' )
+punk.save( "./tmp2/will3.png")
 punk.zoom(8).save( "./tmp2/will3@8x.png")
 
 
+
 punk = Snoop::Image.generate
+punk.save( "./tmp2/snoop.png")
 punk.zoom(8).save( "./tmp2/snoop@8x.png")
 
 punk = Snoop::Image.generate( '3D Glasses' )
+punk.save( "./tmp2/snoop2.png")
 punk.zoom(8).save( "./tmp2/snoop2@8x.png")
 
 punk = Snoop::Image.generate( 'VR' )
+punk.save( "./tmp2/snoop3.png")
 punk.zoom(8).save( "./tmp2/snoop3@8x.png")
 
 
 punk = Bart::Image.generate
+punk.save( "./tmp2/bart.png")
 punk.zoom(8).save( "./tmp2/bart@8x.png")
 
 punk = Bart::Image.generate( '3D Glasses')
+punk.save( "./tmp2/bart2.png")
 punk.zoom(8).save( "./tmp2/bart2@8x.png")
 
 punk = Bart::Image.generate( 'VR')
+punk.save( "./tmp2/bart3.png")
 punk.zoom(8).save( "./tmp2/bart3@8x.png")
 
 
 punk = Mao::Image.generate
+punk.save( "./tmp2/mao.png")
 punk.zoom(8).save( "./tmp2/mao@8x.png")
 
 punk = Mao::Image.generate( '3D Glasses')
+punk.save( "./tmp2/mao2.png")
 punk.zoom(8).save( "./tmp2/mao2@8x.png")
 
 punk = Mao::Image.generate( 'VR')
+punk.save( "./tmp2/mao3.png")
 punk.zoom(8).save( "./tmp2/mao3@8x.png")
 
 

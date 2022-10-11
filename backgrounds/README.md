@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # (Pixel Art) Backgrounds
 
-Yes, you can! Generate your own unique pixel art background images (off chain) from text attributes (via built-in spritesheets); incl. color stripes, gradients, and more
+Yes, you can! Generate your own unique pixel art background images (off-blockchain) from text attributes (via built-in spritesheets); incl. color stripes, gradients, and more
 
 
 * home  :: [github.com/profilepic/text-to-image](https://github.com/profilepic/text-to-image)

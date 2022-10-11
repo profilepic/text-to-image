@@ -13,7 +13,7 @@ Hoe.spec 'belles' do
 
   self.version = Pixelart::Module::Belles::VERSION
 
-  self.summary = "belles - generate your own 24×24 beau / belle pixel head images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
+  self.summary = "belles - generate your own 24×24 beau / belle pixel head images (off-blockchain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/profilepic/text-to-image' }

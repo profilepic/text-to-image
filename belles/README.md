@@ -3,7 +3,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Beaux & Belles (Pixel Head Avatars)
 
-Yes, you can! Generate your own 24×24 beau & belle (pixel) head avatars images (off chain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 beau & belle (pixel) head avatars images (off-blockchain) from text attributes (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 

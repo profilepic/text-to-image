@@ -61,19 +61,19 @@ smiley.zoom( 4 ).save( "smiley1c@4x.png" )
 
 Voila!
 
-![](i/smiley1.png)
-![](i/smiley1.1.png)
-![](i/smiley1.2.png)
-![](i/smiley1b.png)
-![](i/smiley1c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1.1.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1.2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1c.png)
 
 4x:
 
-![](i/smiley1@4x.png)
-![](i/smiley1.1@4x.png)
-![](i/smiley1.2@4x.png)
-![](i/smiley1b@4x.png)
-![](i/smiley1c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1.1@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1.2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley1c@4x.png)
 
 
 
@@ -88,22 +88,22 @@ smiley.save( "smiley2b.png" )
 smiley.zoom( 4 ).save( "smiley2b@4x.png" )
 
 # (re)try with eyes + mouth
-smiley  = Smiley16::Image.generate( "Greener", "Shades", "Grin (Right)" )
+smiley  = Smiley::Image.generate( "Greener", "Shades", "Grin (Right)" )
 smiley.save( "smiley2c.png" )
 smiley.zoom( 4 ).save( "smiley2c@4x.png" )
 ```
 
 Voila!
 
-![](i/smiley2.png)
-![](i/smiley2b.png)
-![](i/smiley2c.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2b.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2c.png)
 
 4x:
 
-![](i/smiley2@4x.png)
-![](i/smiley2b@4x.png)
-![](i/smiley2c@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2b@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/smileys/i/smiley2c@4x.png)
 
 
 

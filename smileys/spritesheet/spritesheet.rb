@@ -7,7 +7,7 @@ require 'spritesheet'
 ## note: smiley circle variants with different diameters in 24px canvas
 ##   e.g. diameters of 15px, 16px, 17px, 20px
 
-diameters = [15,16]
+diameters = [15,16,17,20]
 
 
 diameters.each do |diameter|

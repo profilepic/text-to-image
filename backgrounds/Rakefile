@@ -13,7 +13,7 @@ Hoe.spec 'backgrounds' do
 
   self.version = Pixelart::Module::Backgrounds::VERSION
 
-  self.summary = "backgrounds - generate your own unique pixel art background images (off chain) from text attributes (via built-in spritesheets); incl. color stripes, gradients, and more"
+  self.summary = "backgrounds - generate your own unique pixel art background images (off-blockchain) from text attributes (via built-in spritesheets); incl. color stripes, gradients, and more"
   self.description = summary
 
   self.urls    = { home: 'https://github.com/profilepic/text-to-image' }

@@ -73,7 +73,19 @@ smiley.zoom( 4 ).save( "./tmp15/smiley1.2@4x.png" )
 
 
 
+####
+# try 17px diameter variant
+smiley  = Smiley17::Image.generate( "Yellow", "Face 1" )
+smiley.save( "./tmp17/smiley1.png" )
+smiley.zoom( 4 ).save( "./tmp17/smiley1@4x.png" )
 
+
+####
+# try 20px diameter variant
+
+smiley  = Smiley20::Image.generate( "Yellow", "Face 1" )
+smiley.save( "./tmp20/smiley1.png" )
+smiley.zoom( 4 ).save( "./tmp20/smiley1@4x.png" )
 
 
 puts "bye"
