@@ -2,7 +2,7 @@ The Do-It-Yourself (DIY) [Factory of Modern Originals (FoMO)](https://github.com
 
 # Readymades (1/1 Original Pixel Punks)
 
-Yes, you can! Generate your own 24×24 pixel punk images (off-blockchain) from 1/1 originals incl. William Shakespare, Galileo Galilei, Mao Zedong, The Mask, The Joker, Bard Simpson, and many other readymade public world figures or cinema (fictional or cartoon) characters and add attributes / accessories with text (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
+Yes, you can! Generate your own 24×24 pixel punk images (off-blockchain) from 1/1 originals incl. William Shakespare, Galileo Galilei, Mao Zedong, The Mask, The Joker, Bard Simpson, Edmund "Mundl" Sackbauer, and many other readymade public world figures or cinema (fictional or cartoon) characters and add attributes / accessories with text (via built-in spritesheet); incl. 2x/4x/8x zoom for bigger sizes and more
 
 
 
@@ -97,12 +97,56 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop3.png)
 
+<details>
+<summary markdown="1">4x</summary>
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop3@4x.png)
+
+</details>
+
+
+
+
+```ruby
+# mundl  also known as Edmund Sackbauer
+
+punk = Mundl::Image.generate
+punk.save( "mundl.png")
+
+punk = Mundl::Image.generate( '3D Glasses' )
+punk.save( "mundl2.png")
+
+punk = Mundl::Image.generate( 'VR' )
+punk.save( "mundl3.png")
+```
+
+Voila!
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl2.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl3.png)
+
+<details>
+<summary markdown="1">4x</summary>
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl3@4x.png)
+
+</details>
+
+
 
 
 And so on.
 
 
+
 ## Questions? Comments?
 
-Post them on the [D.I.Y. Punk (Pixel) Art reddit](https://old.reddit.com/r/DIYPunkArt). Thanks.
+Post them over at the [Help & Support](https://github.com/geraldb/help) page. Thanks.
+
+
 

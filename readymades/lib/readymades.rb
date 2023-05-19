@@ -128,6 +128,20 @@ Maozedong  = Mao
 MaoZedong  = Mao
 
 
+module Mundl
+  class Image < Pixelart::Image
+
+    NAMES = ['mundl', 'edmund',
+             'sackbauer',
+             'edmundsackbauer']
+    def self.generate( *more_names )
+       Readymade::Image.generate( 'Edmund Sackbauer', *more_names )
+    end # method Image.generate
+  end # class Image
+end  # module Mundl
+Sackbauer  = Mundl
+
+
 
 
 

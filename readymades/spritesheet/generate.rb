@@ -17,6 +17,7 @@ names = %w[
   the_joker
   the_grinch
   the_mask
+  edmund_sackbauer
 ]
 
 HEART_SHADES = Punks::Sheet.find_by( name: 'Heart Shades', gender: 'm' )
@@ -52,8 +53,11 @@ variants = [
 punks  = ImageComposite.new( variants.size, names.size, background: '#638596' )
 
 
+
 names.each do |name|
   base = Image.read( "./spritesheet/i/#{name}.png" )
+
+  composite = ImageComposite.new( 3, 3, background: '#638596' )
 
   variants.each_with_index do |attributes, i|
      punk = Image.new( 24, 24 )
@@ -66,8 +70,13 @@ names.each do |name|
      punk.zoom(4).save( "./tmp/#{name}#{i}@4x.png")
 
      punks << punk
+     composite << punk
   end
+
+  composite.save( "./tmp/#{name}.png" )
+  composite.zoom(4).save( "./tmp/#{name}@4x.png" )
 end
+
 
 punks.save( "./tmp/readymades.png" )
 punks.zoom(4).save( "./tmp/readymades@4x.png" )

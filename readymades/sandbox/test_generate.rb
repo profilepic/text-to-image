@@ -127,14 +127,17 @@ punk.zoom(8).save( "./tmp2/will3@8x.png")
 
 punk = Snoop::Image.generate
 punk.save( "./tmp2/snoop.png")
+punk.zoom(4).save( "./tmp2/snoop@4x.png")
 punk.zoom(8).save( "./tmp2/snoop@8x.png")
 
 punk = Snoop::Image.generate( '3D Glasses' )
 punk.save( "./tmp2/snoop2.png")
+punk.zoom(4).save( "./tmp2/snoop2@4x.png")
 punk.zoom(8).save( "./tmp2/snoop2@8x.png")
 
 punk = Snoop::Image.generate( 'VR' )
 punk.save( "./tmp2/snoop3.png")
+punk.zoom(4).save( "./tmp2/snoop3@4x.png")
 punk.zoom(8).save( "./tmp2/snoop3@8x.png")
 
 
@@ -162,6 +165,62 @@ punk.zoom(8).save( "./tmp2/mao2@8x.png")
 punk = Mao::Image.generate( 'VR')
 punk.save( "./tmp2/mao3.png")
 punk.zoom(8).save( "./tmp2/mao3@8x.png")
+
+
+
+punk = Mundl::Image.generate
+punk.save( "./tmp2/mundl.png")
+punk.zoom(4).save( "./tmp2/mundl@4x.png")
+punk.zoom(8).save( "./tmp2/mundl@8x.png")
+
+punk = Mundl::Image.generate( '3D Glasses' )
+punk.save( "./tmp2/mundl2.png")
+punk.zoom(4).save( "./tmp2/mundl2@4x.png")
+punk.zoom(8).save( "./tmp2/mundl2@8x.png")
+
+punk = Mundl::Image.generate( 'VR' )
+punk.save( "./tmp2/mundl3.png")
+punk.zoom(4).save( "./tmp2/mundl3@4x.png")
+punk.zoom(8).save( "./tmp2/mundl3@8x.png")
+
+
+
+base = Readymade::Image.generate( 'Snoop Dogg', 'VR', 'Earring' )  ## note: use a "base" punk for background variants
+punk = base.background( 'Ukraine')
+punk.save( "./tmp/snoop0.png")
+punk.zoom(8).save( "./tmp/snoop0@8x.png")
+
+punk = base.background( 'Red' )
+punk.save( "./tmp/snoop1.png")
+punk.zoom(8).save( "./tmp/snoop1@8x.png")
+
+
+
+base = Readymade::Image.generate( 'Mundl' )
+
+punk = base.add( 'VR' )      ## build in steps
+punk = punk.background( 'Ukraine')
+punk.save( "./tmp2/mundl_i.png")
+punk.zoom(4).save( "./tmp2/mundl_i@4x.png")
+punk.zoom(8).save( "./tmp2/mundl_i@8x.png")
+
+punk = base.add( '3D Glasses' )      ## build in steps
+punk = punk.background( 'Red' )
+punk.save( "./tmp2/mundl_ii.png")
+punk.zoom(8).save( "./tmp2/mundl_ii@8x.png")
+
+punk = base.add( '3D Glasses', 'Cigarette', 'Smile' )      ## build in steps
+punk = punk.stripes_horizontal( '#C8102E', '#FFFFFF', '#C8102E' )
+punk.save( "./tmp2/mundl_iii.png")
+punk.zoom(4).save( "./tmp2/mundl_iii@4x.png")
+punk.zoom(8).save( "./tmp2/mundl_iii@8x.png")
+
+
+
+punk = base.add( 'VR' )         ## build in steps
+punk = punk.background( 'Matrix 1', 'Rainbow 1' )
+punk.save( "./tmp2/mundl_iiii.png")
+punk.zoom(8).save( "./tmp2/mundl_iiii@8x.png")
 
 
 puts "bye"
