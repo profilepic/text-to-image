@@ -40,6 +40,13 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will3.png)
 
+4x
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/will3@4x.png)
+
+
 
 ```ruby
 punk = Mao::Image.generate
@@ -58,6 +65,11 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao3.png)
 
+4x
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mao3@4x.png)
 
 
 ```ruby
@@ -77,6 +89,11 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart3.png)
 
+4x
+
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart2@4x.png)
+![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/bart3@4x.png)
 
 
 
@@ -97,14 +114,12 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop3.png)
 
-<details>
-<summary markdown="1">4x</summary>
+4x
 
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop@4x.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop2@4x.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/snoop3@4x.png)
 
-</details>
 
 
 
@@ -128,14 +143,12 @@ Voila!
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl2.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl3.png)
 
-<details>
-<summary markdown="1">4x</summary>
+4x
 
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl@4x.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl2@4x.png)
 ![](https://github.com/profilepic/text-to-image/raw/master/readymades/i/mundl3@4x.png)
 
-</details>
 
 
 
